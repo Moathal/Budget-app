@@ -1,0 +1,14 @@
+<div id="<%= dom_id category %>">
+  <p>
+    <strong>Name:</strong>
+    <%= category.name %>
+  </p>
+
+  <p>
+    <strong>Transactions:</strong>
+    <% category.transactions.each do |item| %>
+    <br><br><h4>Name: </h4><p><%= item.name %></p>
+    <br><h4>Amount: </h4><p><%= item.amount %></p>
+  </p>
+
+</div>
