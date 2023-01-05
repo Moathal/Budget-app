@@ -4,7 +4,9 @@
 
 <div id="categories">
   <% @categories.each do |category| %>
-    <%= render category %>
+    <br><br> <img src=<%= category.icon %> >
+    <h4>Category: </h4>
+    <p><%= category.name %></p>
     <p>
       <%= link_to "Show this category", category %>
     </p>

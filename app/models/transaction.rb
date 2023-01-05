@@ -1,6 +1,6 @@
 class Transaction < ApplicationRecord
-  belongs_to :users, dependent: :destroy
-  has_and_belongs_to_many :categs, foreign_key: 'transactions_id', class_name: 'Category'
+  belongs_to :user, dependent: :destroy
+  belongs_to :category, dependent: :destroy
 
   validates :name, presence: true
   validates_length_of :name, minimum: 2, maximum: 250

@@ -7,8 +7,9 @@
   <p>
     <strong>Transactions:</strong>
     <% category.transactions.each do |item| %>
-    <br><br><h4>Name: </h4><p><%= item.name %></p>
-    <br><h4>Amount: </h4><p><%= item.amount %></p>
+    <br><br><p><%= item.icon %></p>
+    <h4>Amount: </h4><p><%= item.name %></p>
+    <% end %>
   </p>
 
 </div>
