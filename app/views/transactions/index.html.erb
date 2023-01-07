@@ -5,9 +5,6 @@
 <div id="transactions">
   <% @transactions.each do |transaction| %>
     <%= render transaction %>
-    <p>
-      <%= link_to "Show this transaction", transaction %>
-    </p>
   <% end %>
 </div>
 

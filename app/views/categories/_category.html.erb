@@ -1,14 +1,16 @@
 <div id="<%= dom_id category %>">
-  <p>
-    <strong>Name:</strong>
+  
+  <img src="<%= category.icon %>">
+  <h4>
+    <strong>Category:</strong>
     <%= category.name %>
-  </p>
+  </h4>
 
   <p>
-    <strong>Transactions:</strong>
+    <strong>Category transactions:</strong>
     <% category.transactions.each do |item| %>
-    <br><br><p><%= item.icon %></p>
-    <h4>Amount: </h4><p><%= item.name %></p>
+    <br><br><p><%= item.name %></p>
+    <h4>Amount: </h4><p><%= item.amount %></p>
     <% end %>
   </p>
 

@@ -1,16 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe "transactions/show", type: :view do
+RSpec.describe 'transactions/show', type: :view do
   before(:each) do
     assign(:transaction, Transaction.create!(
-      name: "Name",
-      icon: "Icon",
-      users: nil,
-      categories: nil
-    ))
+                           name: 'Name',
+                           icon: 'Icon',
+                           users: nil,
+                           categories: nil
+                         ))
   end
 
-  it "renders attributes in <p>" do
+  it 'renders attributes in <p>' do
     render
     expect(rendered).to match(/Name/)
     expect(rendered).to match(/Icon/)

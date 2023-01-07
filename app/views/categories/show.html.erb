@@ -3,7 +3,9 @@
 <%= render @category %>
 
 <div>
-  <%= link_to "Back to categories", categories_path %>
+  <br><%= link_to "All my categories", categories_path %>
+  <br><%= link_to "All my transactions", transactions_path %>
+  <br><%= link_to "Add new Transaction", new_transaction_path %>
 
   <%= button_to "Delete", @category, method: :delete %>
 </div>

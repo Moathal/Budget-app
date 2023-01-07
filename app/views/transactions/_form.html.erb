@@ -17,18 +17,13 @@
   </div>
 
   <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon %>
+    <%= form.label :amount, style: "display: block" %>
+    <%= form.text_field :amount %>
   </div>
-
+  
   <div>
-    <%= form.label :users_id, style: "display: block" %>
-    <%= form.text_field :users_id %>
-  </div>
-
-  <div>
-    <%= form.label :categories_id, style: "display: block" %>
-    <%= form.text_field :categories_id %>
+    <%= form.label :category, style: "display: block" %>
+    <%= form.collection_select :category_id, @categories, :id, :name, include_blank: true %>
   </div>
 
   <div>

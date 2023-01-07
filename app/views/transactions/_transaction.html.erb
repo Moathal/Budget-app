@@ -5,18 +5,13 @@
   </p>
 
   <p>
-    <strong>Icon:</strong>
-    <%= transaction.icon %>
+    <strong>Amount: </strong>
+    $<%= transaction.amount %>
   </p>
 
   <p>
-    <strong>Users:</strong>
-    <%= transaction.users_id %>
-  </p>
-
-  <p>
-    <strong>Categories:</strong>
-    <%= transaction.categories_id %>
+    <strong>Category:</strong>
+    <a href="/categories/<%= transaction.category_id %>"><%= transaction.category.name %></a>
   </p>
 
 </div>
