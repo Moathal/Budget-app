@@ -69,7 +69,7 @@
 - [Live Demo Link](Not available yet)
 
 ## Presentation
-[click Here]()
+[click Here](https://www.loom.com/share/88470d24a2b6433883c9bf4ecde6cc66)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,7 +164,8 @@ If you like this project and give a star
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank microverse community
+- I would like to thank microverse community
+- I would like to thank [Gregoire Vella](https://www.behance.net/gregoirevella) for the design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

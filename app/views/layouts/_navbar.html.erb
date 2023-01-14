@@ -1,0 +1,52 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+
+  <% unless request.path == "/" || request.path == '/categories' %>
+    <%= link_to root_path  do %>
+      <img style="width: 2rem" src="/assets/arrow-icon.png" alt="Back to home page" class="fa fa-power-off text-danger">
+    <% end %>
+  <% else %>
+      <i class="fa fa-user text-white"></i>
+  <% end %>
+  
+<h5 class="navbar-brand">
+<% if request.path == "/" %>
+  Welcome
+<% elsif request.path == "/categories" || request.path == "/categories/new" %>
+  Categories
+<% elsif request.path == "/users/sign_up" %>
+    Register
+<% elsif request.path == "/users/sign_in" %>
+    Log in
+<% else %>
+  Transactions
+<% end %>
+  </h5>
+         <% if current_user.present? %>
+      <%= button_to destroy_user_session_path, class:"btn", method: :delete do %>
+        <img style="width: 2rem" alt="Logout" src="/assets/logout_icon.png" class="fa fa-power-off text-danger">
+    <% end %>
+    <% else %>
+      <i class="fa fa-user text-white"></i>
+    <% end %>
+    </div>
+</nav>
+<% if current_user %>
+  <div class="card" style="height:60px;">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-8">
+        <p class="text-muted">Credit</p>
+      </div>
+      <div class="col-3">
+        <p class="text-dark text-right">
+          <small class="mr-0 ml-5">
+            $<%= sum_of_amounts(current_user) %>
+          </small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
