@@ -19,3 +19,7 @@
     text-decoration: none;
     color: black;
  }
+
+ .mt-2.btn.btn-sm {
+   background-color: #5FB523;
+ }
