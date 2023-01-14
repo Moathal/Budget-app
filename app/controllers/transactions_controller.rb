@@ -1,4 +1,6 @@
 class TransactionsController < ApplicationController
+  before_action :authenticate_user!
+
   # GET /transactions or /transactions.json
   def index
     @transactions = Transaction.all.where(user_id: current_user.id)
@@ -25,6 +27,7 @@ class TransactionsController < ApplicationController
 
   # DELETE /transactions/1 or /transactions/1.json
   def destroy
+    @transaction = Transaction.find(params[:id])
     @transaction.destroy
 
     respond_to do |format|

@@ -1,16 +1,40 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Categories</h1>
-
 <div id="categories">
   <% @categories.each do |category| %>
-    <br><br> <img src=<%= category.icon %> >
-    <h4>Category: </h4>
-    <p><%= category.name %></p>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
+      <div class="card mb-3">
+      <%= link_to category_path(category.id) do%>
+        <div class="card-body">
+          <div class="row d-flex align-items-center">
+            <div class="col-3">
+              <img src="<%= category.icon%>" class="img-fluid" alt="...">
+            </div>
+            <div class="col-5">
+              <p class="card-text"><%= category.name %></p>
+            </div>
+            <div class="col-4">
+              <p class="card-text fw-bold"><small>
+                  <% sum = 0 %>
+                  <% category.transactions.each do |transaction| %>
+                    <% sum += transaction.amount %>
+                  <% end %>
+                  <%= "$#{sum}" %>
+                </small></p>
+            </div>
+          </div>
+        </div>
+      <div class="card-footer d-flex justify-content-center align-items-center">
+          <%= button_to category_path(category.id), class:"btn", method: :delete do %>
+            <img src="/assets/delete.png" style="width: 2rem">
+          <% end %>
+      </div>
+      <% end %>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New category", new_category_path %>
+<%= link_to new_category_path,class:"nav-link" do %>
+  <section class="bg-success shadow text-center text-white p-2 mt-5">
+    <p class="border border-white my-3 p-1">Add New Category</p>
+  </section>
+<% end %>

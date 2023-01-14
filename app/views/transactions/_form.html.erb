@@ -1,3 +1,4 @@
+<div class="container mt-3">
 <%= form_with(model: transaction) do |form| %>
   <% if transaction.errors.any? %>
     <div style="color: red">
@@ -22,11 +23,12 @@
   </div>
   
   <div>
-    <%= form.label :category, style: "display: block" %>
-    <%= form.collection_select :category_id, @categories, :id, :name, include_blank: true %>
+    <%= form.label :category, class:"my-1", style: "display: block" %>
+    <%= form.collection_select :category_id, @categories, :id, :name, include_blank: true, class:"form-select" %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Add transaction", class:"mt-3 btn btn-primary btn-sm" %>
+  </div>
   </div>
 <% end %>

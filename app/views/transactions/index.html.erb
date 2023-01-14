@@ -1,11 +1,14 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>Transactions</h1>
-
-<div id="transactions">
+<div class="container mt-3">
   <% @transactions.each do |transaction| %>
     <%= render transaction %>
   <% end %>
 </div>
 
-<%= link_to "New transaction", new_transaction_path %>
+<%= link_to new_transaction_path,class:"nav-link" do %>
+  <section class="bg-success shadow text-center text-white p-2 mt-5">
+    <p class="border border-white my-3 p-1">Add New Transaction</p>
+  </section>
+<% end %>
+
+</div>

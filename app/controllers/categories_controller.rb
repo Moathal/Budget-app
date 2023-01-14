@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!
+
   # GET /categories or /categories.json
   def index
     @categories = Category.all.where(user_id: current_user.id)
@@ -30,6 +32,7 @@ class CategoriesController < ApplicationController
 
   # DELETE /categories/1 or /categories/1.json
   def destroy
+    @category = Category.find(params[:id])
     @category.destroy
 
     respond_to do |format|

@@ -1,17 +1,47 @@
-<div id="<%= dom_id category %>">
-  
-  <img src="<%= category.icon %>">
-  <h4>
-    <strong>Category:</strong>
-    <%= category.name %>
-  </h4>
-
-  <p>
+  <div class="card mb-3">
+  <div class="card-body">
+    <div class="row d-flex flex-row align-items-center justify-content-between">
+      <div class="d-flex flex-row col-4 mr-0 p-0">
+        <div>
+          <img src="<%= category.icon %>" style="width: 4rem" class="d-flex flex-row align-items-center mr-1">
+        </div>
+        <div>
+          <h3 class="card-text"><%= category.name %></h3>
+        </div>
+      </div>
+      <div class="col-3 ml-0 w-3">
+        <p class="card-text fw-bold"><small>
+          <% sum = 0 %>
+          <% category.transactions.each do |transaction| %>
+            <% sum += transaction.amount %>
+          <% end %>
+          <%= "$#{sum}" %>
+          </small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
     <strong>Category transactions:</strong>
     <% category.transactions.each do |item| %>
-    <br><br><p><%= item.name %></p>
-    <h4>Amount: </h4><p><%= item.amount %></p>
-    <% end %>
-  </p>
-
+<div class="card mb-3">
+  <div class="card-body">
+    <div class="row d-flex flex-row align-items-center justify-content-between">
+      <div class="d-flex flex-column col-4 mr-0 p-0">
+        <div>
+          <p class="card-text"><%= item.name%></p>
+        </div>
+        <div>
+          <p class="card-text">$<%= item.amount %></p>
+        </div>
+      </div>
+      <div class="col-3 ml-0 w-3">
+        <%= button_to transaction_path(item.id), class:"btn", method: :delete do %>
+          <img src="/assets/delete.png" style="width: 2rem">
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
+<% end %>

@@ -1,6 +1,6 @@
 class Transaction < ApplicationRecord
-  belongs_to :user, dependent: :destroy
-  belongs_to :category, dependent: :destroy
+  belongs_to :user
+  belongs_to :category
 
   validates :name, presence: true
   validates_length_of :name, minimum: 2, maximum: 250

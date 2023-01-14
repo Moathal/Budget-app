@@ -3,9 +3,15 @@
 <%= render @category %>
 
 <div>
-  <br><%= link_to "All my categories", categories_path %>
-  <br><%= link_to "All my transactions", transactions_path %>
-  <br><%= link_to "Add new Transaction", new_transaction_path %>
+  <br><%= link_to transactions_path do%>
+    <section class="bg-primary shadow text-center text-white p-2 mt-5">
+    <p class="border border-white my-3 p-1">All my transactions</p>
+  </section>
+  <% end %>
 
-  <%= button_to "Delete", @category, method: :delete %>
+  <%= link_to new_transaction_path,class:"nav-link" do %>
+  <section class="bg-success shadow text-center text-white p-2">
+    <p class="border border-white my-3 p-1">Add New Transaction</p>
+  </section>
+<% end %>
 </div>

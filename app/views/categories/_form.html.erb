@@ -1,3 +1,4 @@
+<div class="container mt-3">
 <%= form_with(model: category) do |form| %>
   <% if category.errors.any? %>
     <div style="color: red">
@@ -22,6 +23,7 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Add category", class:"mt-2 btn btn-primary btn-sm" %>
+  </div>
   </div>
 <% end %>
