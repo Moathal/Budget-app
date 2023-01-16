@@ -21,4 +21,6 @@ test:
 
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  database: databasefree
+  username: databasefree_user
+  password: <%= ENV["databaseFree_DATABASE_PASSWORD"] %>
