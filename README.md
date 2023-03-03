@@ -16,7 +16,7 @@
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
-  - [🚀 Live Demo](#live-demo) (Not available yet...) 
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -62,11 +62,11 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a> (Not available yet)
+## 🚀 Live Demo <a name="live-demo"></a>
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](Not available yet)
+- [Live Demo Link](https://fastidious-jelly-2a5aaa.netlify.app/)
 
 ## Presentation
 [click Here](https://www.loom.com/share/88470d24a2b6433883c9bf4ecde6cc66)
