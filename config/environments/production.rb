@@ -82,15 +82,15 @@ Rails.application.configure do
   # require "syslog/logger"
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")
 
-  config.action_mailer.default_url_options = { host: 'budgetappmoathal.onrender.com'}
-  config.action_controller.default_url_options = { host: 'budgetappmoathal.onrender.com'}
+  # config.action_mailer.default_url_options = { host: 'budgetappmoathal.onrender.com'}
+  # config.action_controller.default_url_options = { host: 'budgetappmoathal.onrender.com'}
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
-    logger           = ActiveSupport::Logger.new(STDOUT)
-    logger.formatter = config.log_formatter
-    config.logger    = ActiveSupport::TaggedLogging.new(logger)
-  end
+  # if ENV["RAILS_LOG_TO_STDOUT"].present?
+  #   logger           = ActiveSupport::Logger.new(STDOUT)
+  #   logger.formatter = config.log_formatter
+  #   config.logger    = ActiveSupport::TaggedLogging.new(logger)
+  # end
 
-  # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
+  # # Do not dump schema after migrations.
+  # config.active_record.dump_schema_after_migration = false
 end
