@@ -4,7 +4,8 @@
 
   <% unless request.path == "/" || request.path == '/categories' %>
     <%= link_to root_path  do %>
-      <img style="width: 2rem" src="arrow-icon.png" alt="Back to home page" class="fa fa-power-off text-danger">
+       <%= image_tag asset_path("arrow-icon.png"), style"width: 2rem", alt="Back to home page", class="fa fa-power-off text-danger" %>
+      <%# <img style="width: 2rem" src="arrow-icon.png" alt="Back to home page" class="fa fa-power-off text-danger"> %>
     <% end %>
   <% else %>
       <i class="fa fa-user text-white"></i>
