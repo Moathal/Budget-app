@@ -22,6 +22,6 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  database: databaseFree
+  database: Budget-app_production
   username: postgres
   password: <%= ENV["BUDGET-APP_DATABASE_PASSWORD"] %>

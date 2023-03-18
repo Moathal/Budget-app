@@ -98,7 +98,7 @@ Rails.application.configure do
           port:                 587,
           domain:               'budgetappmoathal.onrender.com',
           user_name:            'moathalsapp@gmail.com',
-          password:             'iybcpjzxyryxfppl',
+          password:             'ibapkturvfyfzkgw',
           authentication:       'plain',
           enable_starttls_auto: true,
           open_timeout:         5,
