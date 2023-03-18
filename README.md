@@ -66,7 +66,7 @@
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://fastidious-jelly-2a5aaa.netlify.app/)
+- [Live Demo Link](https://budgetappmoathal.onrender.com/)
 
 ## Presentation
 [click Here](https://www.loom.com/share/88470d24a2b6433883c9bf4ecde6cc66)
