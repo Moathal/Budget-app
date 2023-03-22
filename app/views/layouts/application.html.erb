@@ -15,7 +15,15 @@
   <body>
   <%= render partial: "layouts/navbar" %>
   <%= yield %>
-
-      
+ <% if notice %>
+  <div class="alert alert-success">
+    <%= notice %>
+  </div>
+<% end %>
+<% if alert %>
+  <div class="alert alert-danger">
+    <%= alert %>
+  </div>
+<% end %>
   </body>
 </html>
